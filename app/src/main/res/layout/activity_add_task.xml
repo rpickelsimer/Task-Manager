@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ryan Pickelsimer
+ Full Documentation at TaskManager/REASDME.txt -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <!-- User input for Task Name -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_TaskName"
+        android:maxLength="25"
+        android:hint="@string/task_name" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Task Type label -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/task_type"
+            android:id="@+id/tv_Type"
+            android:layout_weight="1" />
+
+        <!-- display Date/Time when it has been selected -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_DateTime"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- allow user to choose Task Type -->
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spin_Type"
+            android:layout_weight="1"
+            android:entries="@array/task_types"
+            android:prompt="@string/task_type" />
+
+        <!-- pull up layout with date.time pickers -->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time"
+            android:id="@+id/btn_DateTime"
+            android:layout_weight="1"
+            android:onClick="onDateTimeClick" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- pass user information to other Activity -->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_task"
+            android:id="@+id/btn_AddTask"
+            android:layout_weight="1"
+            android:onClick="onAddTaskClick" />
+
+        <!-- go to other Acitivity -->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/btn_Cancel"
+            android:layout_weight="1"
+            android:onClick="onCancelClick" />
+    </LinearLayout>
+
+</LinearLayout>
