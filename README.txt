@@ -1,6 +1,19 @@
 Ryan Pickelsimer
-April 12, 2015
 Adv Mobile App Dev
+
+***** April 20, 2015
+
+Used SharedPreferences to pass data between Actvities. Also fixed column issues in TableLayout.
+
+
+***** April 19, 2015
+
+Used startActivityforResult() to handle passing data. This eliminated the need for IntentHelper.java.
+Also eliminated Date and Time classes and folded into Task.
+Fixed issues with cancel button.
+
+
+***** April 12, 2015
 
 This program meets the requirements set forth in the week 1 module programming assignment. 
 The application has one screen that list tasks and info while another is used to add a task with date time and task type.
